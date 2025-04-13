@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Système de paiement académique sécurisé pour les établissements d'enseignement">
+    <title>Accueil - Système de Paiement Académique</title>
+    
+    <!-- Préchargement des ressources critiques -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" as="style">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Chargement asynchrone de Semantic UI -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"></noscript>
+    
+    <!-- Optimisation des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS inline critique -->
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Open Sans', system-ui, -apple-system, sans-serif;
+            background-color: #f8f9fa;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-image: url('logo.jpeg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-blend-mode: overlay;
+            background-color: rgba(244, 244, 244, 0.9);
+        }
+        
+        .ui.container.main-container {
+            max-width: min(800px, 90vw) !important;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+            padding: 2.5rem;
+            backdrop-filter: blur(5px);
+            margin: 2rem auto;
+        }
+        
+        .header {
+            color: #2c3e50;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+        }
+        
+        .ui.button {
+            width: 100%;
+            margin: 0.75rem 0;
+            padding: 1rem;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            border-radius: 8px !important;
+        }
+        
+        .ui.button.primary {
+            background-color: #3498db;
+        }
+        
+        .ui.button.primary:hover {
+            background-color: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+        
+        .ui.button.secondary {
+            background-color: #2ecc71;
+            color: white;
+        }
+        
+        .ui.button.secondary:hover {
+            background-color: #27ae60;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(46, 204, 113, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .ui.container.main-container {
+                padding: 1.5rem;
+            }
+            
+            .ui.two.column.grid {
+                flex-direction: column;
+            }
+            
+            .column {
+                width: 100% !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="ui container main-container">
+        <h1 class="ui center aligned header">Système de Paiement Académique</h1>
+        <div class="ui raised very padded text container segment" style="border: none; box-shadow: none;">
+            <div class="ui two column stackable middle aligned grid">
+                <div class="column">
+                    <a href="connexion.php" class="ui large primary button" aria-label="Se connecter au système">
+                        <i class="sign-in icon"></i>
+                        Connexion
+                    </a>
+                </div>
+                <div class="column">
+                    <a href="inscription.php" class="ui large secondary button" aria-label="S'inscrire au système">
+                        <i class="user plus icon"></i>
+                        Inscription
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Pied de page léger -->
+        <footer class="ui center aligned basic segment" style="margin-top: 2rem;">
+            <p style="color: #7f8c8d; font-size: 0.9rem;">
+                &copy; 2025 Système de Paiement Académique. Tous droits réservés.
+            </p>
+        </footer>
+    </div>
+    
+    <!-- Chargement différé des scripts non critiques -->
+    <script>
+        // Polyfill pour les fonctionnalités manquantes
+        if (!('loading' in HTMLImageElement.prototype)) {
+            // Chargement des polyfills si nécessaire
+        }
+        
+        // Amélioration progressive
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animation douce au chargement
+            setTimeout(function() {
+                document.querySelector('.ui.container').style.opacity = '1';
+                document.querySelector('.ui.container').style.transform = 'translateY(0)';
+            }, 50);
+        });
+    </script>
+</body>
+</html>
